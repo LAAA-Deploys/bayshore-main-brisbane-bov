@@ -44,9 +44,13 @@ tr.total td{background:#eef2f7;font-weight:700;color:#0a2540;border-top:2px soli
 .tbl-scroll{overflow-x:auto}
 .psf{font-weight:700;color:#0a2540;white-space:nowrap}
 .comp-sub{display:block;font-size:11.5px;color:#666;font-weight:400;margin-top:3px;line-height:1.45;white-space:normal}
+tr.note td{font-size:12px;color:#555;line-height:1.5;padding:4px 10px 10px 10px;border-bottom:1px solid #e6e9ef;background:#fff}
+tr.note td .nl{font-weight:700;color:#8a6f2a;margin-right:4px}
+tr.comp td{border-bottom:none}
+tr.note:nth-child(even) td,tr.comp:nth-child(even) td{background:#fff}
 td.num{white-space:nowrap}
 .psf.hot{color:#b03a2e}
-.cname{font-weight:700;color:#0a2540}
+.cname{font-weight:700;color:#0a2540;display:block;margin-bottom:4px;min-width:150px}
 .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap}
 .b-closed{background:#e2f3e8;color:#1f7a3f}
 .b-pending{background:#fdf1dc;color:#9a6b0f}
@@ -67,9 +71,9 @@ td.num{white-space:nowrap}
 .pc-box .l{font-size:11.5px;text-transform:uppercase;letter-spacing:1px;color:#666}
 .pc-box .v{font-size:22px;font-weight:800;color:#0a2540;margin-top:4px}
 .pc-box .s{font-size:12px;color:#666;margin-top:3px}
-.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:18px 0 8px}
+.path-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin:18px 0 8px}
 .path-card{border:1px solid #e6e9ef;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
-.path-card .ph{padding:16px 18px;color:#fff;min-height:112px;display:flex;flex-direction:column;justify-content:flex-end}
+.path-card .ph{padding:16px 18px;color:#fff;height:118px;display:flex;flex-direction:column;justify-content:flex-end}
 .path-card.pa .ph{background:linear-gradient(135deg,#0a2540,#143b6b)}
 .path-card.pb .ph{background:linear-gradient(135deg,#3a4a6b,#5a6f9a)}
 .path-card.pc .ph{background:linear-gradient(135deg,#5a4a1f,#8a6f2a)}
@@ -82,7 +86,8 @@ td.num{white-space:nowrap}
 .path-card .pb-body li{margin-bottom:7px;line-height:1.55}
 .path-card .pmetric{display:flex;justify-content:space-between;padding:9px 20px;border-top:1px solid #e6e9ef;font-size:12.5px}
 .path-card .pmetric .l{color:#666}
-.path-card .pmetric .v{font-weight:700;color:#0a2540;text-align:right}
+.path-card .pmetric .v{font-weight:700;color:#0a2540;text-align:right;margin-left:8px}
+@media (max-width:760px){.path-card .ph{height:auto;min-height:0}.path-grid{grid-template-columns:1fr}}
 .team-leads{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin:16px 0}
 .team-headshot.ext{object-position:center}
 .lead-card .co{display:inline-block;font-size:11px;font-weight:700;color:#1d5bbf;background:#e3edfb;border-radius:10px;padding:2px 10px;margin-bottom:8px;letter-spacing:0.5px;text-transform:uppercase}
@@ -305,8 +310,8 @@ footer b{color:#e6ecf5}
     <div class="path-card pa">
       <div class="ph">
         <div class="ptag">Pathway A &middot; For-Sale</div>
-        <div class="pname">Specific Plan Hillside Community</div>
-        <div class="punits">Approx. 100 to 150 homes and townhomes</div>
+        <div class="pname">Hillside For-Sale Community</div>
+        <div class="punits">Approx. 100 to 150 homes</div>
       </div>
       <div class="pb-body"><ul>
         <li>The Northeast Ridge model: 10 to 15 units per acre on the buildable slope, upper slope dedicated under the HCP, 25% open space.</li>
@@ -314,7 +319,7 @@ footer b{color:#e6ecf5}
         <li>Exit is the Crestmoor Estates and Point Martin buyer at $1.3M to $2.1M+ per home.</li>
       </ul></div>
       <div class="pmetric"><span class="l">Approval</span><span class="v">Specific Plan + EIR</span></div>
-      <div class="pmetric"><span class="l">Buyer</span><span class="v">Regional homebuilder / land entitler</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Homebuilder / entitler</span></div>
       <div class="pmetric"><span class="l">Land value driver</span><span class="v">$ per lot</span></div>
     </div>
     <div class="path-card pb">
@@ -328,8 +333,8 @@ footer b{color:#e6ecf5}
         <li>Preliminary application must be on file before HCD recertifies Brisbane, likely late 2026 or early 2027.</li>
         <li>Site exclusions (habitat, wetlands, fire zone) shape the footprint; the survey decides whether this pathway is real.</li>
       </ul></div>
-      <div class="pmetric"><span class="l">Approval</span><span class="v">HAA / objective standards</span></div>
-      <div class="pmetric"><span class="l">Buyer</span><span class="v">Apartment or attainable-housing developer</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">HAA process</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Apartment developer</span></div>
       <div class="pmetric"><span class="l">Land value driver</span><span class="v">$ per door</span></div>
     </div>
     <div class="path-card pc">
@@ -350,7 +355,7 @@ footer b{color:#e6ecf5}
     <div class="path-card pd">
       <div class="ph">
         <div class="ptag">Pathway D &middot; Conservation</div>
-        <div class="pname">Habitat Acquisition or Mitigation</div>
+        <div class="pname">Conservation Sale</div>
         <div class="punits">Whole or partial sale of the upper slope</div>
       </div>
       <div class="pb-body"><ul>
@@ -358,9 +363,9 @@ footer b{color:#e6ecf5}
         <li>Conservation buyers pay appraised fair market value for habitat land, historically a small fraction of development land value per acre.</li>
         <li>Best used as the exit for the upper slope inside Pathway A or B, or as HCP mitigation credit, rather than for the whole parcel.</li>
       </ul></div>
-      <div class="pmetric"><span class="l">Approval</span><span class="v">None (fee or easement)</span></div>
-      <div class="pmetric"><span class="l">Buyer</span><span class="v">Land trust / public agency</span></div>
-      <div class="pmetric"><span class="l">Land value driver</span><span class="v">$ per acre, appraised</span></div>
+      <div class="pmetric"><span class="l">Approval</span><span class="v">None (fee/easement)</span></div>
+      <div class="pmetric"><span class="l">Buyer</span><span class="v">Land trust / agency</span></div>
+      <div class="pmetric"><span class="l">Land value driver</span><span class="v">$ per acre</span></div>
     </div>
   </div>
   <div class="info-callout"><strong>How to read these:</strong> Pathway A is the durable value and
@@ -386,56 +391,56 @@ footer b{color:#e6ecf5}
   <h3>Closed Land Sales, 2025</h3>
   <div class="tbl-scroll">
   <table>
-    <tr><th>#</th><th>Property</th><th>Status</th><th>Site Area</th><th>Entitlement at Sale</th><th>Price</th><th>$/SF Land</th><th>$/Acre</th><th>Per Unit</th></tr>
-    <tr>
+    <tr><th>#</th><th>Property / Status</th><th>Site Area</th><th>Entitlement at Sale</th><th>Price</th><th>$/SF Land<br>$/Acre</th><th>Per Unit</th></tr>
+    <tr class="comp">
       <td>1</td>
-      <td><span class="cname">300 Piedmont Ave, San Bruno (Crestmoor)</span><span class="comp-sub">Former Crestmoor High School site sold by the San Mateo Union High School District to SummerHill Homes after SummerHill secured City approval for 155 single-family homes; SummerHill then sold to Toll Brothers, which opened Crestmoor Estates on August 26, 2026 from about $2.1 million. Flat, graded school site outside the HCP. The entitled ceiling for the set.</span></td>
-      <td><span class="badge b-closed">Closed Feb 6, 2025</span></td>
-      <td class="num">40.0 ac<br>1,742,400 SF</td><td>Entitled, 155 homes</td><td class="num">$86,552,000</td><td class="psf">$49.67</td><td class="num">$2,163,800</td><td class="num">$558,400 per lot</td>
+      <td><span class="cname">300 Piedmont Ave, San Bruno (Crestmoor)</span><span class="badge b-closed">Closed Feb 6, 2025</span></td>
+      <td class="num">40.0 ac<br>1,742,400 SF</td><td>Entitled, 155 homes</td><td class="num">$86,552,000</td><td class="num"><span class="psf">$49.67</span><br>$2,163,800</td><td class="num">$558,400 per lot</td>
     </tr>
-    <tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>Former Crestmoor High School site sold by the San Mateo Union High School District to SummerHill Homes after SummerHill secured City approval for 155 single-family homes; SummerHill then sold to Toll Brothers, which opened Crestmoor Estates on August 26, 2026 from about $2.1 million. Flat, graded school site outside the HCP. The entitled ceiling for the set.</td></tr>
+    <tr class="comp">
       <td>2</td>
-      <td><span class="cname">3000-3155 Clearview Way, San Mateo (Clearview Business Park)</span><span class="comp-sub">22-acre hilltop office campus (379,615 SF, six buildings, partially leased to GoPro) bought off-market by Harvest Properties and Stockbridge from Goldman Sachs Asset Management to re-entitle as up to 225 for-sale townhomes and single-family homes with 15% affordable. Price supported by in-place office income; unentitled for housing. Same acreage as the subject.</span></td>
-      <td><span class="badge b-closed">Closed Sep 2025</span></td>
-      <td class="num">22.0 ac<br>958,320 SF</td><td>Unentitled (office in place)</td><td class="num">$102,000,000</td><td class="psf hot">$106</td><td class="num">$4,636,400</td><td class="num">$453,300 per planned unit</td>
+      <td><span class="cname">3000-3155 Clearview Way, San Mateo (Clearview Business Park)</span><span class="badge b-closed">Closed Sep 2025</span></td>
+      <td class="num">22.0 ac<br>958,320 SF</td><td>Unentitled (office in place)</td><td class="num">$102,000,000</td><td class="num"><span class="psf hot">$106</span><br>$4,636,400</td><td class="num">$453,300 per planned unit</td>
     </tr>
-    <tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>22-acre hilltop office campus (379,615 SF, six buildings, partially leased to GoPro) bought off-market by Harvest Properties and Stockbridge from Goldman Sachs Asset Management to re-entitle as up to 225 for-sale townhomes and single-family homes with 15% affordable. Price supported by in-place office income; unentitled for housing. Same acreage as the subject.</td></tr>
+    <tr class="comp">
       <td>3</td>
-      <td><span class="cname">493 Eastmoor Ave, Daly City</span><span class="comp-sub">County of San Mateo purchase of a 0.37-acre infill lot for a 72-unit, 100% affordable project with The Core Companies. Public buyer, small urban site; shown for its per-door land budget, not as a size comp.</span></td>
-      <td><span class="badge b-closed">Closed Dec 2025</span></td>
-      <td class="num">0.37 ac<br>16,117 SF</td><td>Unentitled, affordable program</td><td class="num">$4,440,000</td><td class="psf hot">$275</td><td class="num">$12,000,000</td><td class="num">$61,700 per unit</td>
+      <td><span class="cname">493 Eastmoor Ave, Daly City</span><span class="badge b-closed">Closed Dec 2025</span></td>
+      <td class="num">0.37 ac<br>16,117 SF</td><td>Unentitled, affordable program</td><td class="num">$4,440,000</td><td class="num"><span class="psf hot">$275</span><br>$12,000,000</td><td class="num">$61,700 per unit</td>
     </tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>County of San Mateo purchase of a 0.37-acre infill lot for a 72-unit, 100% affordable project with The Core Companies. Public buyer, small urban site; shown for its per-door land budget, not as a size comp.</td></tr>
   </table>
   </div>
 
   <h3>Active Competing Listings</h3>
   <div class="tbl-scroll">
   <table>
-    <tr><th>#</th><th>Property</th><th>Status</th><th>Site Area</th><th>Entitlement</th><th>List Price</th><th>$/SF Land</th><th>$/Acre</th><th>Per Unit</th></tr>
-    <tr>
+    <tr><th>#</th><th>Property / Status</th><th>Site Area</th><th>Entitlement</th><th>List Price</th><th>$/SF Land<br>$/Acre</th><th>Per Unit</th></tr>
+    <tr class="comp">
       <td>A</td>
-      <td><span class="cname">239 Serramonte Blvd, Daly City</span><span class="comp-sub">Fully entitled 499-unit (plus one manager's unit) four-building high-rise site adjacent to Serramonte Center, marketed for rental, condominium or hybrid; AGH Realty Group. The entitled multifamily ceiling in northern San Mateo County.</span></td>
-      <td><span class="badge b-active">Listed Mar 27, 2026</span></td>
-      <td class="num">6.24 ac<br>271,814 SF</td><td>Entitled, 499 units</td><td class="num">$68,000,000</td><td class="psf hot">$250</td><td class="num">$10,897,400</td><td class="num">$136,300 per unit</td>
+      <td><span class="cname">239 Serramonte Blvd, Daly City</span><span class="badge b-active">Listed Mar 27, 2026</span></td>
+      <td class="num">6.24 ac<br>271,814 SF</td><td>Entitled, 499 units</td><td class="num">$68,000,000</td><td class="num"><span class="psf hot">$250</span><br>$10,897,400</td><td class="num">$136,300 per unit</td>
     </tr>
-    <tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>Fully entitled 499-unit (plus one manager's unit) four-building high-rise site adjacent to Serramonte Center, marketed for rental, condominium or hybrid; AGH Realty Group. The entitled multifamily ceiling in northern San Mateo County.</td></tr>
+    <tr class="comp">
       <td>B</td>
-      <td><span class="cname">3100 Bayshore Blvd, Brisbane (adjoining)</span><span class="comp-sub">APN 005-141-100, 9.36 acres zoned M-1, the other Guadalupe Hills parcel; marketed by Kidder Mathews for office development since January 2018 with no disclosed price and no sale. Eight years on the market is the clearest signal of what unentitled commercial land on this slope is worth.</span></td>
-      <td><span class="badge b-stale">Listed since 2018</span></td>
-      <td class="num">9.36 ac<br>407,722 SF</td><td>Unentitled, M-1</td><td class="num">Undisclosed</td><td class="psf">n/a</td><td class="num">n/a</td><td class="num">n/a</td>
+      <td><span class="cname">3100 Bayshore Blvd, Brisbane (adjoining)</span><span class="badge b-stale">Listed since 2018</span></td>
+      <td class="num">9.36 ac<br>407,722 SF</td><td>Unentitled, M-1</td><td class="num">Undisclosed</td><td class="num"><span class="psf">n/a</span><br>n/a</td><td class="num">n/a</td>
     </tr>
-    <tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>APN 005-141-100, 9.36 acres zoned M-1, the other Guadalupe Hills parcel; marketed by Kidder Mathews for office development since January 2018 with no disclosed price and no sale. Eight years on the market is the clearest signal of what unentitled commercial land on this slope is worth.</td></tr>
+    <tr class="comp">
       <td>C</td>
-      <td><span class="cname">Bayshore Blvd, Brisbane (four R-1 lots)</span><span class="comp-sub">APNs 007-250-010, 007-350-130, 007-350-140 and 007-350-160, 4.3 hillside acres in the Southwest Bayshore area with Bay views, listed October 2021 at a combined $3,200,000 across the four lots; no longer advertised and no recorded sale found. Buyer was told to verify permitted uses with the City.</span></td>
-      <td><span class="badge b-stale">Listed 2021, unsold</span></td>
-      <td class="num">4.30 ac<br>187,308 SF</td><td>R-1 hillside, unentitled</td><td class="num">$3,200,000 (combined ask)</td><td class="psf">$17.08</td><td class="num">$744,200</td><td class="num">n/a</td>
+      <td><span class="cname">Bayshore Blvd, Brisbane (four R-1 lots)</span><span class="badge b-stale">Listed 2021, unsold</span></td>
+      <td class="num">4.30 ac<br>187,308 SF</td><td>R-1 hillside, unentitled</td><td class="num">$3,200,000 (combined ask)</td><td class="num"><span class="psf">$17.08</span><br>$744,200</td><td class="num">n/a</td>
     </tr>
-    <tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>APNs 007-250-010, 007-350-130, 007-350-140 and 007-350-160, 4.3 hillside acres in the Southwest Bayshore area with Bay views, listed October 2021 at a combined $3,200,000 across the four lots; no longer advertised and no recorded sale found. Buyer was told to verify permitted uses with the City.</td></tr>
+    <tr class="comp">
       <td>D</td>
-      <td><span class="cname">3750-3780 Bayshore Blvd, Brisbane</span><span class="comp-sub">2.0 acres per the listing (2.9 acres per the City), PD-zoned, with a 30-unit residential condominium approval granted in 2005 that has sat in permit review since; Norcal Realty, price upon request.</span></td>
-      <td><span class="badge b-active">Active</span></td>
-      <td class="num">2.0 ac<br>87,120 SF</td><td>PD, 30 condos approved (2005)</td><td class="num">Price on request</td><td class="psf">n/a</td><td class="num">n/a</td><td class="num">n/a</td>
+      <td><span class="cname">3750-3780 Bayshore Blvd, Brisbane</span><span class="badge b-active">Active</span></td>
+      <td class="num">2.0 ac<br>87,120 SF</td><td>PD, 30 condos approved (2005)</td><td class="num">Price on request</td><td class="num"><span class="psf">n/a</span><br>n/a</td><td class="num">n/a</td>
     </tr>
+    <tr class="note"><td colspan="7"><span class="nl">Notes:</span>2.0 acres per the listing (2.9 acres per the City), PD-zoned, with a 30-unit residential condominium approval granted in 2005 that has sat in permit review since; Norcal Realty, price upon request.</td></tr>
   </table>
   </div>
   <p class="src">Sources: San Mateo Union High School District and San Mateo Daily Journal (Crestmoor,
